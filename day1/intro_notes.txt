@@ -1,0 +1,13 @@
+Important Information:
+
+* Ensure Schedule Access
+* Ensure "Java" platform access
+* Lecture Recordings
+* Code Reviews
+* Assignment Progress
+* Github
+* 90% Core Assignments
+* Brief Course / Week Overview
+* EOD Goals
+* Discord channel / TAs are here to help / Help channel
+* Algos
