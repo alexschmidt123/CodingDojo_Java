@@ -7,12 +7,12 @@ public class Loops
 		// 	System.out.println(i);
 		// }
 
-		// int j = 0;
+		int j = 0;
 
-		// while(j <= 100)
-		// {
-		// 	System.out.println(j);
-		// 	j += 2;
-		// }
+		while(j <= 100)
+		{
+			System.out.println(j);
+			j += 2;
+		}
 	}
 };
