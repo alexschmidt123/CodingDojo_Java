@@ -80,7 +80,11 @@
 public class Program
 {
 	public static void main(String[] args)
-	{
-		
+	{	
+		DynamicArray dynamicArray = new DynamicArray();
+		List list = new List();
+		Stack stack = new Stack();
+		Queue queue = new Queue();
+		Iterator iterate = new Iterator();
 	}
 };

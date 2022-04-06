@@ -1,10 +1,10 @@
-public class ListNode
+public class Node
 {
 	public ListNode next;
 	public ListNode previous;
 	public Integer value;
 
-	public ListNode(Integer value)
+	public Node(Integer value)
 	{
 		this.next=null;
 		this.previous=null;
