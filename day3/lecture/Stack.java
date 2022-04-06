@@ -10,7 +10,7 @@ public class Stack extends List
 		super.PushFront(value);
 	}
 
-	public ListNode Pop()
+	public Node Pop()
 	{
 		return super.PopFront();
 	}
