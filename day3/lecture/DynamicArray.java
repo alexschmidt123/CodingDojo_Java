@@ -1,4 +1,4 @@
-public class DynamicArray<T>
+public class DynamicArray<T> implements Iterable
 {
 	private static Integer scale=16;
 	private Object items[];
@@ -78,5 +78,14 @@ public class DynamicArray<T>
 	{
 		if(index<0||index>length) return null;
 		return (T)items[index];
+	}
+
+	@Override
+	public void Iterate()
+	{
+		for(Object o:items)
+		{
+			System.out.println(o);
+		}
 	}
 };

@@ -10,7 +10,7 @@ public class Queue extends List
 		super.PushBack(value);
 	}
 
-	public ListNode Dequeue()
+	public Node Dequeue()
 	{
 		return super.PopFront();
 	}

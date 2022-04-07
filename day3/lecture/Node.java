@@ -1,7 +1,7 @@
 public class Node
 {
-	public ListNode next;
-	public ListNode previous;
+	public Node next;
+	public Node previous;
 	public Integer value;
 
 	public Node(Integer value)

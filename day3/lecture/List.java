@@ -1,4 +1,4 @@
-public class List
+public class List implements Iterable
 {
 	private Node head;
 	private Node tail;
@@ -65,5 +65,15 @@ public class List
 		if(this.tail!=null) this.tail.next=null;
 		this.length--;
 		return old_tail;
+	}
+	
+	public void Iterate()
+	{
+		Node runner=this.head;
+		while(runner!=null)
+		{
+			System.out.println(runner.value);
+			runner=runner.next;
+		}
 	}
 };
