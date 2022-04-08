@@ -1,0 +1,154 @@
+/*****************************************************************************/
+/* Announcements */
+/*****************************************************************************/
+
+/* If STS is a problem for you, check this video: https://www.youtube.com/watch?v=kDOHlKWWObI */
+
+/* Mention Chat Legend */
+
+/* Mention Cheat Sheet */
+
+/*****************************************************************************/
+/* Morning Lecture */
+/*****************************************************************************/
+
+/* What is the request / response cycle? */
+
+/*
+	APIs
+	
+	GET and POST
+	
+	Giving info to server and getting a response back.
+	
+	a website making request to fetch info from the server and display?
+	
+	the relationship between the user and the website
+	
+	sending and storing information from/to server, code db
+	
+	
+*/
+
+/* How do we make a new SPRING BOOT project? */
+
+/*
+	STS > new workspace > new spring boot project
+	
+	File > New > Spring Boot Starter Project
+	
+*/
+
+/* What is a Controller? */
+
+/*
+	Setting up the routes
+	Routing
+	Communicates with models and views
+*/
+
+/* How do we tell our class that it should accept Requests and return Responses? */
+
+/*
+	Using @RestController
+	GOES ABOVE A CLASS
+*/
+
+/* How do we tell our functions / methods that they should only process specific routes? */
+
+/*
+	@RequestMapping("/users/login")
+	public String login()
+	{
+		return "<h1>Login!</h1>";
+	}
+	
+	GO ABOVE A METHOD / FUNCTION
+*/
+
+/* How do we accept and deal with Query parameters? */
+/* The ones that look like this: google.com?first=john&last=walton  */
+
+/*
+	@RequestMapping("/users/login?name=john&last=walton")
+	public String login(
+		@RequestParam(value="query") String searchQuery
+	)
+	{
+		System.out.println(searchQuery);
+	
+		return "<h1>Login!</h1>";
+	}
+*/
+
+/* How do we accept variable routes such as: /users/123? */
+
+/*
+	@RequestMapping("/users/{id}")
+	public String login(
+		@PathVariable("id") Integer user_id
+	)
+	{
+		System.out.println(user_id);
+	
+		return "<h1>Login!</h1>";
+	}	
+*/
+
+/* What is the difference between query parameters and path variables? */
+
+/*
+	PathVariables make it more dynamic!
+	
+	QueryParams are better for searching specific things!
+	
+	I think query variables take input from user, the others are preset
+*/
+
+/*****************************************************************************/
+/* Afternoon Lecture */
+/*****************************************************************************/
+
+/* What is a JSP, what will we use it for, and what does it stand for? */
+
+/*
+	
+*/
+
+/* What is JSTL and what does it allow us to do? */
+
+/*
+	
+*/
+
+
+/* What is the difference between @RestController and @Controller? */
+
+/*
+	
+*/
+
+/* What dependency do we need in our methods in order to render data to our JSPs? */
+
+/*
+	
+*/
+
+/* How do we do an if statement with JSTL tags on our JSP? */
+/* (We don't need this to complete Fruity Loops, but still useful) */
+
+/*
+	
+*/
+
+/* How do we do a for loop with JSTL tags on our JSP? */
+
+/*
+	
+*/
+
+/* How do we do add static content like css and js to our Spring App? */
+
+/*
+	
+*/

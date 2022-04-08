@@ -1,13 +1,13 @@
-package com.codingdojo.spring;
+package com.coding.scamazon;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class ScamazonApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(ScamazonApplication.class, args);
 	}
 
 }

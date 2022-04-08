@@ -1,2 +1,0 @@
-module bank_account {
-}

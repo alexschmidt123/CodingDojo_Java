@@ -1,10 +1,10 @@
-package com.codingdojo.spring;
+package com.coding.scamazon;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApplicationTests {
+class ScamazonApplicationTests {
 
 	@Test
 	void contextLoads() {
