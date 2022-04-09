@@ -2631,3 +2631,42 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-08 16:48:22.735
 !MESSAGE executing callback sts4.classpath.BTUxydkM SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-08 17:09:00.654
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-08 17:09:00.667
+!MESSAGE classpath=67 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-08 17:09:00.670
+!MESSAGE buffering callback sts4.classpath.BTUxydkM scamazon false 67
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-08 17:09:00.671
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-08 17:09:00.674
+!MESSAGE classpath=67 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-08 17:09:00.676
+!MESSAGE buffering callback sts4.classpath.BTUxydkM scamazon false 67
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-08 17:09:00.677
+!MESSAGE executing callback sts4.classpath.BTUxydkM 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-08 17:09:00.709
+!MESSAGE executing callback sts4.classpath.BTUxydkM SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-04-08 17:09:00.872
+!MESSAGE Unexpected URLConnection defaultUseCaches enabled
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-08 17:09:01.922
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.BTUxydkM
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-08 17:09:01.923
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.BTUxydkM
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-08 17:09:01.923
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-08 17:09:01.923
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.BTUxydkM => OK
