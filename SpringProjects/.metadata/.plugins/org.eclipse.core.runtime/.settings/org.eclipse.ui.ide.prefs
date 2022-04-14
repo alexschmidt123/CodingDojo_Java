@@ -1,3 +1,5 @@
+REFRESH_WORKSPACE_ON_STARTUP=true
+SHOW_LOCATION=true
 eclipse.preferences.version=1
 platformState=1649280709747
 quickStart=false
