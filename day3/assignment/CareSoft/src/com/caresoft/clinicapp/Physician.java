@@ -10,8 +10,8 @@ public class Physician extends User implements HIPAACompliantUser{
 	
     // TO DO: Constructor that takes an ID
     // TO DO: Implement HIPAACompliantUser!
-    public boolean assignPin(Integer pin) {
-    	if (pin < 1000 && pin > 9999) {
+    public boolean assignPin(int pin) {
+    	if (pin < 1000 || pin > 9999) {
     		System.out.println("Pin must be at least 4 digits.");
     		return false;
     	}
@@ -19,7 +19,7 @@ public class Physician extends User implements HIPAACompliantUser{
     	return true;
     };
     public boolean accessAuthorized(Integer confirmedAuthID) {
-    	return this.pin == confirmedAuthID;
+    	return this.id == confirmedAuthID;
     };
     
     

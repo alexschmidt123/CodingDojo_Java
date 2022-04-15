@@ -14,13 +14,13 @@ public class AdminUser extends User implements HIPAACompliantUser, HIPAAComplian
     	this.securityIncidents = new ArrayList<String>();
     }
     
-    public ArrayList<String> Report(){
+    public ArrayList<String> reportSecurityIncidents(){
     	return securityIncidents;
     }
     // TO DO: Implement HIPAACompliantUser!
     // TO DO: Implement HIPAACompliantAdmin!
-    public boolean assignPin(Integer pin) {
-    	if (pin < 100000 && pin > 999999) {
+    public boolean assignPin(int pin) {
+    	if (pin < 100000 || pin > 999999) {
     		System.out.println("Pin must be at least 6 digits.");
     		return false;
     	}
@@ -65,6 +65,6 @@ public class AdminUser extends User implements HIPAACompliantUser, HIPAAComplian
 	public void setEmployeeID(Integer employeeID) {
 		this.employeeID = employeeID;
 	}
-    
+
     // TO DO: Setters & Getters
 }

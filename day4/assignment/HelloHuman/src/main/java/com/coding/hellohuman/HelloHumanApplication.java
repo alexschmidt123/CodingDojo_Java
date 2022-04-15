@@ -21,11 +21,12 @@ public class HelloHumanApplication {
 									 @RequestParam(value="last_name", required=false, defaultValue="")String lastname,
 									 @RequestParam(value="times", required=false, defaultValue="1")Integer repeat_times)
 		{
-			return "<h1>Hello "+firstname+" "+lastname+"</h1>";
 			
-			for (int i; i<repeat_times;i++) {
-				
+			String result = "";
+			for (int i=0; i<repeat_times;i++) {
+				result += "<h1>Hello "+firstname+" "+lastname+"</h1>";
 			};
+			return result;
 		}
 	
 
