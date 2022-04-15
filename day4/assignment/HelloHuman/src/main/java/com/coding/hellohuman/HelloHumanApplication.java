@@ -7,26 +7,26 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
+@RestController
 public class HelloHumanApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(HelloHumanApplication.class, args);
 	}
-	@RestController
-	public class RootController
-	{
-
+	
+	
+	
 		@RequestMapping("/")
-		public String HelloHuman()
+		public String HelloSomebody( @RequestParam(value="name",required=false, defaultValue="Human")String firstname,
+									 @RequestParam(value="last_name", required=false, defaultValue="")String lastname,
+									 @RequestParam(value="times", required=false, defaultValue="1")Integer repeat_times)
 		{
-			return "<h1>Hello Human</h1>";
+			return "<h1>Hello "+firstname+" "+lastname+"</h1>";
+			
+			for (int i; i<repeat_times;i++) {
+				
+			};
 		}
-		
-		@RequestMapping("/?name=firstName&last_name=lastName")
-		public String HelloSomebody( @RequestParam(value="firstName",required=false, defaultValue="Human")String name,@RequestParam(value="lastName", required=false, defaultValue="")String last_name)
-		{
-			return "<h1>Hello "+name+last_name+"</h1>";			
-		}
-	};
+	
 
 }
