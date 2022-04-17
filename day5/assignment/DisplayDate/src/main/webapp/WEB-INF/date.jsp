@@ -6,8 +6,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Date</title>
+<script type="text/javascript" src="js/date.js"></script>
 </head>
 <body>
-    <h1></h1>
+    <h1> <c:out value="${date}"/></h1>
 </body>
 </html>

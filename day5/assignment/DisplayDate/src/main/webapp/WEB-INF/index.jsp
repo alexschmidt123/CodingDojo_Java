@@ -5,10 +5,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Dashboard</title>
+<title>Dash board</title>
 </head>
 <body>
-    <button href="/date">Date Template</button>
-    <button href="/time">Time Template</button>
+    <a href="http://localhost:8080/date">Date Template</a>
+    <a href="http://localhost:8080/time">Time Template</a>
 </body>
 </html>
