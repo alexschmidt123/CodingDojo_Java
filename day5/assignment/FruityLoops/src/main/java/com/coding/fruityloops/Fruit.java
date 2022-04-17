@@ -1,3 +1,4 @@
+package com.coding.fruityloops;
 public class Fruit {
     
     // MEMBER VARIABLES
@@ -9,6 +10,23 @@ public class Fruit {
         this.name = name;
         this.price = price;
     }
+    // Getter
+    public String getName() {
+      return name;
+    }
+
+    // Setter
+    public void setName(String newName) {
+      this.name = newName;
+    }
     
-    // As always, don't forget to generate Getters and Setters!
+    // Getter
+    public double getPrice() {
+      return price;
+    }
+
+    // Setter
+    public void setPrice(double newPrice) {
+      this.price = newPrice;
+    }
 }
