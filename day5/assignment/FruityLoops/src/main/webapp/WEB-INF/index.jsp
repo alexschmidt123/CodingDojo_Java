@@ -13,7 +13,7 @@
 			<div class="container p-3">
 				<h1>Fruit Store</h1>
 
-				<table class="table border border-danger">
+				<table class="table">
 					<thead>
 						<tr>
 							<th scope="col">Name</th>
