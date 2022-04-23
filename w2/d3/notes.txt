@@ -1,0 +1,126 @@
+/*****************************************************************************/
+/* Announcements */
+/*****************************************************************************/
+
+/*****************************************************************************/
+/* Today's App Goals */
+/*****************************************************************************/
+
+Make a C.R.U.D. application that stores data via MySQL.
+
+Create a database model of cohort's choice. ( Movies? Music? Food? )
+
+Use a repository to perform operations on our model.
+
+Use a service as an additional layer of protection and business logic between our model and
+database.
+
+Use model annotations for error handling.
+
+/*****************************************************************************/
+/* Morning Lecture */
+/*****************************************************************************/
+
+/* What is a Repository? */
+
+/*
+	
+*/
+
+/* What annotation do we need above an INTERFACE to tell Spring it's a Repository? */
+
+/*
+	
+*/
+
+/* What INTERFACE must we EXTEND to use the CRUD features of JPA? */
+
+/*
+	
+*/
+
+/* What two arguments must we place within the <> braces when extending a CrudRepository?  */
+/* What does each of these represent respectively?
+
+/*
+	
+*/
+
+/* What is a Service? */
+
+/*
+	
+*/
+
+/* What annotation do we need above a CLASS to tell Spring it's a service? */
+
+/*
+	
+*/
+
+/* How do we use our repository in a service? */
+
+/*
+	
+*/
+
+/* How do we use our service in a controller? */
+
+/*
+	
+*/
+
+/* What is data / model binding? */
+
+/*
+	
+*/
+
+/* What annotation do we need to place an instance of our "Music" model onto our JSP? */
+
+/*
+	
+*/
+
+/* What do we need at the top of our JSP in order to use the form:form tag? */
+
+/*
+	
+*/
+
+/* Aside from action and method, what other attribute must we supply a <form:form> tag
+/* so that Spring knows that it is a Model for use with binding? */
+
+/*
+	
+*/
+
+/* What three <form:?> tags should we supply each field / member of a model on a JSP? */
+
+/*
+	
+*/
+
+/* What attribute must we supply each of the above described tags, so that */
+/* Spring knows what MEMBER of a CLASS / MODEL to directly map / bind / SET it to? */
+
+/*
+	
+*/
+
+/* What annotation should we place before (@ModelAttribute("music") Music music) */
+/* in order to tell spring it should run validations on our model / class? */
+
+/*
+	
+*/
+
+/* What is a BindingResult and how do we display errors with it? */
+
+/*
+	
+*/
+
+/*****************************************************************************/
+/* Afternoon Lecture */
+/*****************************************************************************/

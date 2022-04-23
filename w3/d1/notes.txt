@@ -1,0 +1,77 @@
+*******************************************************************************
+Announcements - Week 4 Day 1
+*******************************************************************************
+
+* Mic Test
+
+* Mid Track Surveys: https://login.codingdojo.com/dashboard/mid-stack-survey
+
+* Instructor Chris is away teaching Web Fundamentals!
+
+* PC / Windows had a meltdown Friday, reformatted to Linux. Life is good again!
+
+* STS is not abiding for me, so hope you don't mind that we use VsCode today :/
+
+* (Like we're really upset about that.)
+
+*******************************************************************************
+App Goals
+*******************************************************************************
+
+* Change our song app to be a Many To Many relationship, where one artist can 
+
+compose many songs, but one song can also be composed by many artists.
+
+* Revisit our song model, so that we only specify the name and genre, not the artist.
+
+* Make a new jsp and form with dual dropdowns to associate a pre-existing artist
+
+with a pre-existing song.
+
+* Show only the many-to-many associations (DUAL JOIN) on the jsp using a <c:forEach> loop.
+
+*******************************************************************************
+Morning Lecture
+*******************************************************************************
+
+Not many questions today! Unless you have some! (Hope ya do!)
+
+!!(A many to many can be represented multiple ways in Spring. We will do it the middle table way.)!!
+
+What 3 annotations must we use to implement a Many To Many relationship?
+
+@ManyToMany(fetch=FetchType.LAZY) <- Tells spring we want a N:N relationship.
+
+Artist.java:
+
+@JoinTable(
+	name="artists_songs", <- Middle / N:N  table name
+	joinColumn=@JoinColumn(name="artist_id"), <- Foreign Key 1
+	inverseJoinColumn=@JoinColumn(name="song_id") <- Foreign Key 2
+)
+private List<Song> songs;
+
+Song.java:
+
+@JoinTable(
+	name="artists_songs", <- Middle / N:N  table name
+	joinColumn=@JoinColumn(name="song_id"),
+	inverseJoinColumn=@JoinColumn(name="artist_id")
+)
+private List<Artist> artists;
+
+What 3 properties must we supply the @JoinTable annotation?
+
+name="artists_songs" <- middle table name
+joinColumn=@JoinColumn(name="artist_id") <- first foreign key name
+inverseJoinColumn=@JoinColumn(name="song_id") <- second foreign key
+
+What model holds the many / List<> side?
+
+Both! Trick Question!
+
+*******************************************************************************
+Afternoon Lecture
+*******************************************************************************
+
+No questions here, do fill in the blanks instead!

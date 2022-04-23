@@ -1,0 +1,119 @@
+*******************************************************************************
+Announcements - Week 2 Day 5!
+*******************************************************************************
+
+Meeting @ 3:30 CST | 4:30 EST
+
+Stats tab
+
+How many went to Activity Day?
+
+EOD = Book Club
+
+*******************************************************************************
+App Goals
+*******************************************************************************
+
+Create a User model
+
+Create a LoginUser model
+
+Register users with validations
+
+Log users in with validations
+
+Implement Session
+
+Hashing Passwords (BCrypt)
+
+Prevent visiting pages if they are not logged in.
+
+*******************************************************************************
+Morning Lecture
+*******************************************************************************
+
+What dependency do we need for bcrypt / hashing? (Check cheatsheet)
+
+<dependency>
+	<groupId>org.mindrot</groupId>
+	<artifactId>jbcrypt</artifactId>
+	<version>0.4</version>
+</dependency>
+
+
+What model annotation do we need to validate emails?
+
+@Email(message="Please enter a valid email!")
+
+What model annotation can we use to prevent storing a column in MySQL?
+
+@Transient
+private String confirm;
+
+Ignores making a column by this name in MySQL.
+
+How can we add a query to search by user emails? What file would it go in?
+
+UserRepository.java:
+
+Optional<User> findByEmail(String email);
+
+select * from users where users.email="?";
+
+What file should we create login and register functions in?
+
+UserService:
+
+Boolean Login()
+{
+
+}
+
+Boolean Register()
+{
+
+}
+
+How will we keep track of whether a user is logged in?
+
+public String index(HttpSession session)
+{
+	if(session.getAttribute("user")==null)
+	{
+		return "redirect:/register";
+	}
+	
+}
+
+
+What two BCrypt functions will we need to Hash user passwords?
+
+String BCrypt.hashpw(String form_password,Integer salt); <- Hashes a password 
+
+Boolean BCrypt.checkpw(String form_password,String db_password); <- Determines whether they are match.
+
+BCrypt.gensalt(8); <- Adds extra randomness
+
+What function on the BindingResult object can we use to display additional custom errors?
+
+public String Register(@Valid @ModelAttribute("user") User user,BindingResult br)
+{
+	if(!hashpw())
+	{
+		br.rejectValue("password","no_pw_match","Password is incorrect!");
+	}
+
+	if(br.hasErrors())
+	{
+		return "register";
+	}
+	
+	userService.Create(user);
+	return "/login";
+}
+
+*******************************************************************************
+Afternoon Lecture
+*******************************************************************************
+
+No more questions! Finish up where we left off if necessary!

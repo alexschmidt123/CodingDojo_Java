@@ -1,0 +1,195 @@
+/*****************************************************************************/
+/* Announcements */
+/*****************************************************************************/
+
+Make today more of a catch up day, code review, and core assignment day. Have
+
+morning lecture, but not afternoon lecture. Condense morning lecture so that
+
+we can use the whole afternoon for code reviews and core assignment completion
+
+as a group for those whom wish to attend.
+
+/*****************************************************************************/
+/* Today's App Goals */
+/*****************************************************************************/
+
+Make a C.R.U.D. application that stores data via MySQL.
+
+Create a database model of cohort's choice. ( Movies? Music? Food? )
+
+Use a repository to perform operations on our model.
+
+Use a service as an additional layer of protection and business logic between our model and
+database.
+
+Use model annotations for error handling.
+
+/*****************************************************************************/
+/* Morning Lecture */
+/*****************************************************************************/
+
+/* Ask who has MySQL workbench installed. (Not required, but useful. We could just use MySQL shell). */
+
+/*
+	Everyone
+*/
+
+
+/* What does M.V.C stand for? */
+
+/*
+	M. = Models
+	V. = Views
+	C. = Controller
+*/
+
+/* What is a Database Model? */
+
+/*
+	Business Logic and Functions
+	Persistent data representing an entity within our app.
+	Handles data and / or relationships.
+	A class that becomes a db table.
+*/
+
+/* What settings must we add to our application.properties config for MySQL support? */
+
+/*
+	spring.mvc.view.prefix=/WEB-INF/
+	spring.mvc.view.suffix=.jsp
+	spring.mvc.hiddenmethod.filter.enabled=true
+	spring.datasource.url=jdbc:mysql://localhost:3306/yourdb
+	spring.datasource.username=root
+	spring.datasource.password=root
+	spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+	spring.jpa.hibernate.ddl-auto=update	
+*/
+
+/* What dependencies must we add to our pom.xml for MySQL support? */
+
+/*
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <scope>runtime</scope>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-data-jpa</artifactId>
+	</dependency>
+*/
+
+/* What is J.P.A., and what does it stand for? */
+
+/*
+	Java Persistence API
+	Lets us talk to MySQL via our MODELS.
+*/
+
+/* What annotation do we need above a CLASS to tell Spring it's a Database Model? */
+
+/*
+	@Entity - Tells JPA / Spring that we want to store this object
+	in MySQL.
+
+	@Table(name="your_table") - Renames the mysql table to what you've
+	supplied instead. OTHERWISE it will default to your class / model
+	name.
+
+	@Entity
+	@Table(name="users")
+	class User
+	{
+	
+	};
+*/
+
+/* What annotation(s) do we need above a field to tell Spring it's a Primary Key? */
+
+/*
+	@Id - Indicates that a field / member variable should be a
+	PRIMARY KEY.
+
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	- Adds one to the previous id. (AutoIncrement) 
+
+	@Entity
+	class User
+	{
+		@Id
+		@GeneratedValue(strategy=GenerationType.IDENTITY)		
+		private Long id;
+	};
+*/
+
+/* What validation annotation do we need above a FIELD / MEMBER to tell Spring it cannot be blank? */
+
+/*
+	@Entity
+	public User
+	{
+		@NotNull
+		private String first_name;
+	};
+
+*/
+
+/* What validation annotation do we need above a field to tell Spring it's length must be within a specified range? */
+
+/*
+	@Entity
+	public User
+	{
+		@Size(min=8,max=255,message="Password must be between 8-255 characters.")
+		private String password;
+	};
+*/
+
+/* How do we specify an error message within a validation annotation? */
+
+/*
+		@Size(min=8,max=255,message="Password must be between 8-255 characters.")
+		private String password;
+*/
+
+/*****************************************************************************/
+/* Afternoon Lecture */
+/*****************************************************************************/
+
+/* What is a Service? */
+
+/*
+	
+*/
+
+/* What annotation do we need above a Service to tell Spring it's a service? */
+
+/*
+	
+*/
+
+/* What is a Repository? */
+
+/*
+	
+*/
+
+/* What annotation do we need above an interface to tell Spring it's a Repository? */
+
+/*
+	
+*/
+
+/* What interface must we extend to use the built in CRUD features of JPA? */
+
+/*
+	
+*/
+
+/* What two arguments must we place within the <> braces when extending a CrudRepository?  */
+/* What does each of these represent respectively?
+
+/*
+	
+*/

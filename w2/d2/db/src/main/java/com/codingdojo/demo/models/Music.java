@@ -1,0 +1,57 @@
+package com.codingdojo.demo.models;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+@Entity
+public class Music
+{
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Long id;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getSong_title() {
+		return song_title;
+	}
+
+	public void setSong_title(String song_title) {
+		this.song_title = song_title;
+	}
+
+	public String getArtist_name() {
+		return artist_name;
+	}
+
+	public void setArtist_name(String artist_name) {
+		this.artist_name = artist_name;
+	}
+
+	public String getGenre() {
+		return genre;
+	}
+
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+
+	@NotNull
+	private String song_title;
+
+	@NotNull
+	private String artist_name;
+
+	@Size(min=8,max=255,message="Genre must be between 8-255 characters!")
+	private String genre;
+};

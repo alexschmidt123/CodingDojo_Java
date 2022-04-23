@@ -1,0 +1,142 @@
+/*****************************************************************************/
+/* Announcements */
+/*****************************************************************************/
+
+* Please fill out surveys if you haven't already! Let us know how we're doing
+
+and what we can do to improve! Your feedback is invaluable, I wan't to improve.
+
+* Activity Day @ 12:00AM CST
+
+* Meeting @ 4:00 CST
+
+* Move evening lecture to 2:00 CST
+
+* 3:00 CST Tech Talk
+
+https://www.google.com/url?q=https://codingdojo.zoom.us/j/89044293971&sa=D&source=calendar&ust=1649636763890638&usg=AOvVaw2lHPV-8NcHUIo9WdG9bFip
+
+/*****************************************************************************/
+/* Today's App Goals */
+/*****************************************************************************/
+
+Build on our Music App from yesterday.
+
+Make a second database model "Artist".
+
+Make a One-To-Many relationship between artists and songs, where one artist
+
+has or can compose many songs.
+
+Be able to create artists and songs independently.
+
+When creating a song, have the ability to select the artist it belongs to.
+
+/*****************************************************************************/
+/* Morning Lecture */
+/*****************************************************************************/
+
+/* Don't forget to do a split screen view of our models side-by-side to show */
+/* important links between them. */
+
+/* What two annotations must we supply our "Song" model in order to create a */
+/* One To Many Relationship? */
+
+/*
+	@OneToMany
+*/
+
+/* What is fetchtype LAZY vs fetchtype EAGER? */
+
+/*
+	Eager is fast
+	Lazy is slow
+	
+	Lazy=When Necessary
+	Eager=Now
+
+	Lazy=Doesn't perfrm a SQL Join until you use the member variable.
+	Eager=Always performs a SQL Join no matter the circumstance.
+
+	LAZY = fetch when needed
+	EAGER = fetch immediately
+*/
+
+/* What does the "name" attribute of the @JoinColumn annotation reference? */
+
+/*
+	@JoinColumn(name="dojo_id")
+	 
+	Maps the foreign key
+	
+	The foreign key name
+
+	select * from dojos
+	join ninjas on
+	ninjas.id=dojo.ninja_id;
+	
+	select * from ninjas
+	join dojos on
+	dojos.id=ninja.dojo_id;
+*/
+
+/* What should the TYPE be that we are storing in our Song model? */
+
+/*
+	class Artist
+	{
+		@OneToMany()
+		List<Song> songs;
+	};
+	
+
+	class Song
+	{
+	
+		@ManyToOne()	
+		Artist artist;
+	};
+*/
+
+/* What annotation must we supply our "Artist" model in order to create a */
+/* One To Many Relationship? */
+
+/*
+	@OneToMany()
+*/
+
+/* What does the "mappedBy" attribute in a @OneToMany annotation represent? */
+/* One To Many Relationship? */
+
+/*
+	It is also a foreign key
+	
+	class Artist
+	{
+		@OneToMany(mappedBy="artist",fetch=FetchType.LAZY)
+		List<Song> songs;
+	};
+	
+	class Song
+	{
+	
+		@ManyToOne(fetch=FetchType.LAZY)
+		@JoinColumn(name="artist_id")
+		Artist artist;
+	};
+*/
+
+/* What should the TYPE be that we are storing in our Artist model? */
+
+/*
+	List<Song> songs;
+*/
+
+/*****************************************************************************/
+/* Afternoon Lecture */
+/*****************************************************************************/
+
+/*
+	Ensure that we can select an artist from a dropdown and add them as the creator
+	of that song as well as put them in the artist's list of songs.
+*/

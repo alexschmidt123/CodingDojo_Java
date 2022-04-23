@@ -1,0 +1,125 @@
+/*****************************************************************************/
+/* Announcements */
+/*****************************************************************************/
+
+TBD
+
+/*****************************************************************************/
+/* Today's App Goals */
+/*****************************************************************************/
+
+Make a mad libs esque game, where the user enter's
+form data in the form of nouns, verbs, and adjectives.
+
+We'll store the number of short stories they've attempted
+in a session.
+
+We'll then POST that to our server, process it, and render
+a new page with a custom generated short story based
+on their input.
+
+In the afternoon, we will will validate these inputs,
+ensuring they've abided by our game's rules, displaying
+errors to them if they've not done so. We'll also be sure
+to store their short story into session, so that we can 
+redirect them to a new route that will display the story.
+
+STRETCH GOAL:Store short stories as an ArrayList<String>
+into session, so that users can see their previous
+stories.
+
+/*****************************************************************************/
+/* Morning Lecture */
+/*****************************************************************************/
+
+/* What is the purpose of session storage? */
+
+/*
+	Storing info
+	Cookies
+	Persistence of data
+	Lets us persist info across requests.
+*/
+
+/* How do we use session in a route? */
+
+/*
+	Write: HttpSession session inside a function
+	that processes a request.
+*/
+
+/* How do we put data into session? */
+
+/*
+	session.setAttribute("key",value);
+*/
+
+/* How do we get data out of session? */
+
+/*
+	Integer count=session.getAttribute("key");
+*/
+
+/* How can we clear a session entirely? */
+
+/*
+	session.invalidate();
+*/
+
+/* What is the difference between POST and GET Requests? */
+
+/*
+	Post = Sending Information (Securely)
+	Get  = Pulling info
+
+	Post send info get retrieves
+
+	Get is PUBLIC and ANYONE can see it in the URL.
+*/
+
+/* What attributes must we supply a form tag in order for */
+/* a server to process it's information? */
+
+/*
+	<form action="/madlibs" method="POST" >
+		<input type="submit" value="Make Story" />
+	</form>
+*/
+
+/* When should we render templates during a POST route? */
+
+/*
+	NEVER, ALWAYS REDIRECT!	
+*/
+
+/*****************************************************************************/
+/* Afternoon Lecture */
+/*****************************************************************************/
+
+/* How long do flash attributes persist for? */
+
+/*
+	One redirect
+*/
+
+/* How do we use flash attributes in a route? */
+
+/*
+	RedirectAttributes redirectAttributes
+*/
+
+/* How do we use display flash attributes on a template? */
+
+/*
+	The same way that we output data from Model
+	attributes
+	
+	${your_flash_msg}
+
+*/
+
+/* How do we redirect a request to a different route? */
+
+/*
+	return "redirect:/"
+*/
