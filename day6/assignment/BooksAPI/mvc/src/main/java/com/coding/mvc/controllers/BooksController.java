@@ -17,7 +17,10 @@ public class BooksController {
  public BooksController(BookService bookService) {
      this.bookService = bookService;
  }
- 
+ @RequestMapping("/")
+ public String toDashboard() {
+	 return "redirect:/books";
+ }
  @RequestMapping("/books")
  public String dashboard(Model model) {
      List<Book> books = bookService.allBooks();
