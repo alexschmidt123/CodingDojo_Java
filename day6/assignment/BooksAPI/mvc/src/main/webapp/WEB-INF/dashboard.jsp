@@ -8,9 +8,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Dashboard</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
 </head>
 <body>
 <h1>All Books</h1>
@@ -33,7 +33,7 @@
 									<c:out value="${book.title}"></c:out>
 								</th>
 								<th>
-									<c:out value="${book.lang}"></c:out>
+									<c:out value="${book.language}"></c:out>
 								</th>
 								<th>
 									<c:out value="${book.pages}"></c:out>

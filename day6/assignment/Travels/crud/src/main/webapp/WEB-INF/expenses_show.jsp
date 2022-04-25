@@ -13,14 +13,11 @@
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-<h1><c:out value="${book.title}"></c:out></h1>
-<p>Description:<c:out value="${book.description}"></c:out></p>
-<p>Language:<c:out value="${book.language}"></c:out></p>
-<p>Number of Pages:<c:out value="${book.pages}"></c:out></p>
-<form action="/books/${book.id}/delete" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Delete">
-</form>
-<a href="/books">Go back to home</a>
+	<h1>Expense Details</h1>
+	<a href="/expenses">Go back</a>
+	<p>Expense Name: <c:out value="${expense.name}"></c:out></p>
+	<p>Expense Description:<c:out value="${expense.description}"></c:out></p>
+	<p>Vendor:<c:out value="${expense.vendor}"></c:out></p>
+	<p>Amount Spent: $<c:out value="${expense.price}"></c:out></p>
 </body>
 </html>
