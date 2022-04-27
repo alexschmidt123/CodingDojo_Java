@@ -1,4 +1,4 @@
-1. create src/main/webapp/WEB-INF
+ 1. create src/main/webapp/WEB-INF
 
 2. edit application.properties:
 
