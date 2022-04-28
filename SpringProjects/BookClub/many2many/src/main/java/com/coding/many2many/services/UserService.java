@@ -1,5 +1,7 @@
 package com.coding.many2many.services;
 
+import java.util.Optional;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -39,9 +41,20 @@ public class UserService
 		userRepository.save(user);
 	}
 
+	public User ReadAll() 
+	{
+		return (User) userRepository.findAll();
+	}
+	
 	public User FindByEmail(String email)
 	{
 		User user = userRepository.findByEmail(email);
+		return user;
+	}
+	
+	public User FindById (Long id)
+	{
+		User user = userRepository.findById(id).orElse(null);
 		return user;
 	}
 

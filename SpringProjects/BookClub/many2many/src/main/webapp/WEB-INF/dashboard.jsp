@@ -15,13 +15,15 @@
 <body class="bg_white2">
 	<div class="container p2 grid gap2">
 		<div class="card">
-			<div class="card_head flex">
+			<div class="card_head flex justify_between align_center gap2">
 				<div>
-					<h1 class="col_white1">Welcome, ${session.name} </h1>
+					<h1 class="col_white1">Welcome,${loginUser.name} </h1>
 					<p>Books from everyone's shelves</p>
 				</div>
-				<a href="/logout">logout</a>
-				<a href="/books/new">Add one book to my shelf</a>
+				<div>
+				<div><a href="/logout">logout</a></div>
+				<div><a href="/books/new">Add one book to my shelf</a></div>
+				</div>
 			</div>
 			
 			<div class="card_body grid">
@@ -48,7 +50,7 @@
 											<c:out value="${book.author}"></c:out>
 										</th>
 										<th> 
-											<c:out value="${book.user}"></c:out>
+											<c:out value="${book.user.name}"></c:out>
 										</th>
 									</tr>
 									</c:forEach>

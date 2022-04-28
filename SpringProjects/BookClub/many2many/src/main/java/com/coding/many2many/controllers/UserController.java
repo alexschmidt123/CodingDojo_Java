@@ -49,7 +49,11 @@ public class UserController
 			return "loginRegister";
 		}
 		User db_user = userService.login(loginUser,result);
-		if(db_user==null) return "loginRegister";
+		if(db_user==null)
+		{
+			viewModel.addAttribute("loginUser",new LoginUser());
+			return "loginRegister";
+		}
 		session.setAttribute("user_id",db_user.getId());
 		return "redirect:/books";
 	}
@@ -59,7 +63,7 @@ public class UserController
 	public String logout(HttpSession session)
 	{
 		userService.Logout(session);
-		return "loginRegister";
+		return "redirect:/";
 	}
 
 	@PostMapping("/register_user")
@@ -71,16 +75,16 @@ public class UserController
         Model viewModel
 	)
 	{
-		System.out.println("AAAAAAA");
 		if(result.hasErrors()) {
-			System.out.println("BBBBBBB");
 			viewModel.addAttribute("loginUser", new LoginUser());
 			return "loginRegister";
 		}
-		System.out.println("CCCCCCC");
 		User errors=userService.register(registerUser,result);
-		if(errors==null) return "loginRegister";
-		System.out.println("DDDDDDDD");
-		return "loginRegister";
+		if(errors==null)
+		{
+			viewModel.addAttribute("loginUser", new LoginUser());
+			return "loginRegister";
+		}
+		return "redirect:/";
 	}
 };

@@ -1,5 +1,7 @@
 package com.coding.many2many.controllers;
 
+import java.util.Optional;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.coding.many2many.models.Book;
+import com.coding.many2many.models.User;
 import com.coding.many2many.services.BookService;
 import com.coding.many2many.services.UserService;
 
@@ -38,6 +41,10 @@ public class BookController
 	{
 		if(!us.IsLoggedIn(session)) return "redirect:/";
 		model.addAttribute("books",bookService.ReadAll());
+		Long userId = (Long) session.getAttribute("user_id");
+		User loginUser = us.FindById(userId);
+		model.addAttribute("loginUser",loginUser);
+//		model.addAttribute("user", us.ReadAll());
 		return "dashboard";
 	}
 	
@@ -65,6 +72,9 @@ public class BookController
 			model.addAttribute("books",bookService.ReadAll());
 			return "addBook";	
 		}
+		Long userId = (Long) session.getAttribute("user_id");
+		User loginUser = us.FindById(userId);
+		book.setUser(loginUser);
 		bookService.Create(book);
 		return "redirect:/books";
 	}

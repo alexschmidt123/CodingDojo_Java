@@ -15,7 +15,7 @@
 <body class="bg_white2">
 	<div class="container p2 grid gap2">
 		<div class="card">
-			<div class="card_head flex">
+			<div class="card_head flex gap2 align_center">
 				<div>
 					<h1 class="col_white1">Add a book to your shelf! </h1>
 				</div>

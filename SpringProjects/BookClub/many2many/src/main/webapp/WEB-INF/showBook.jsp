@@ -15,7 +15,7 @@
 <body class="bg_white2">
 	<div class="container p2 grid gap2">
 		<div class="card">
-			<div class="card_head flex">
+			<div class="card_head flex align_center justify_arround gap2">
 				<div>
 					<h1 class="col_white1">${book.title}</h1>
 				</div>
@@ -26,12 +26,12 @@
 
 	<div class="container p2 grid gap2">
 			<div class="card_header">
-				<p>${session.name} read ${book.title} by ${book.author}</p>
-				<p>Here are ${session.name}'s thoughts:</p>
+				<p>${book.user.name} read ${book.title} by ${book.author}</p>
+				<p>Here are ${book.user.name}'s thoughts:</p>
 			</div>
 			<div class="card_body">
 				<p>${book.thoughts}</p>
-				<a class="btn_submit" href="/book/edit/${book.id}">edit</a>
+				<a class="btn_submit" href="/books/edit/${book.id}">edit</a>
 			</div>
 	</div>
 	</div>

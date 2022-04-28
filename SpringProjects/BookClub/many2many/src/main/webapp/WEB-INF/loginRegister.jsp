@@ -14,7 +14,7 @@
 </head>
 <body class="bg_white2">
 
-
+<h1>Login and Register Interface for BookClub System</h1>
 	<div class="container p2 grid gap2">
 		<form:form class="card" action="/login_user" method="POST" modelAttribute="loginUser" >
 			<div class="card_head">

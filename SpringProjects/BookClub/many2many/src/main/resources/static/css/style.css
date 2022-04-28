@@ -25,6 +25,8 @@
 .gap2{gap:2rem;}
 .text_center{text-align:center;}
 .justify_center{justify-content:center;}
+.justify_around{justify-content:around;}
+.justify_between{justify-content:between;}
 .align_center{align-items:center;}
 .col1{grid-template-columns:1fr;}
 .block{display:block;}
